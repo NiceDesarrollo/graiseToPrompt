@@ -92,7 +92,7 @@ export async function POST(request) {
     // "Give me a concise and short description of this image of " + jewelryFamily +", using heartwarming words.";
 
     const prompt =
-    "Give me a concise and short description of this image of " + jewelryFamily +", using romantic and poetic words.";
+    "Give me a concise and short description of this image of " + jewelryFamily +", using charming and poetic words.";
 
 
   const imageParts = [await blobToGenerativePart(ImageRequestFile, imageType)];
