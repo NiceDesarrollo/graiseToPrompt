@@ -51,7 +51,7 @@ async function HomePage() {
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               <span className="typewriter">
-                <span>y</span>
+                <span>R</span>
                 <span>o</span>
                 <span>m</span>
                 <span>a</span>

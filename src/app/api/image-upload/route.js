@@ -85,16 +85,14 @@ export async function POST(request) {
     model: "gemini-pro-vision",
     generationConfig: generation_config,
     safetySettings: safety_settings,
-    systemInstruction: "you are an expert on jewelry",
+    systemInstruction: "You are an expert on jewelry. Describe the golden color as 18-karat gold. Be very descriptive with colors and refer to any stone that appears to be a diamond as Diamonice.",
   });
 
-  // const prompt =
-  //   "Imagine you are a senior copywriter working for the best jewelry company and the best marketing boss will review you work so you need to generate a romanticized description of a jewelry image in both English (preceded by **English prompt:**) and Spanish (preceded by **Spanish prompt:**). The description should specify the type of jewelry such as earrings, hoop earrings, necklaces, bracelets, bangles, chains, rings, or brooches, whether they have charms, the colors using HTML color table names, and what metal they are made of, whether gold or platinum. The description should captivate the audience and encourage them to purchase the jewelry. ";
-  // const prompt =
-  //   "Generate a romanticized description of a jewelry picture. The description should specify the type of jewelry, the colors using HTML color table names, and what metal they are made of, whether gold-plated 18k or platinum-plated. The description should captivate the audience and encourage them to purchase the jewelry. Write 3 different descriptions but from others perspective, use different words for each option.";
+    // const prompt =
+    // "Give me a concise and short description of this image of " + jewelryFamily +", using heartwarming words.";
 
     const prompt =
-    "Give me a concise and short description of this image of " + jewelryFamily +", using heartwarming words.";
+    "Give me a concise and short description of this image of " + jewelryFamily +", using romantic and poetic words.";
 
 
   const imageParts = [await blobToGenerativePart(ImageRequestFile, imageType)];
