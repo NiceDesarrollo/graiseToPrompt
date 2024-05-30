@@ -85,14 +85,13 @@ export async function POST(request) {
     model: "gemini-pro-vision",
     generationConfig: generation_config,
     safetySettings: safety_settings,
-    systemInstruction: "You are an expert on jewelry. Describe the golden color as 18-karat gold. Be very descriptive with colors and refer to any stone that appears to be a diamond as Diamonice.",
   });
 
     // const prompt =
     // "Give me a concise and short description of this image of " + jewelryFamily +", using heartwarming words.";
 
     const prompt =
-    "Give me a concise and short description of this image of " + jewelryFamily +", using charming and poetic words.";
+    "You are an expert on jewelry. change the golden word for 18-karat gold. Be very descriptive with colors and refer to any stone that looks like a diamond to Diamonice and Give me a concise and short description of this image of " + jewelryFamily +", using charming and poetic words.";
 
 
   const imageParts = [await blobToGenerativePart(ImageRequestFile, imageType)];
