@@ -91,7 +91,7 @@ export async function POST(request) {
     // "Give me a concise and short description of this image of " + jewelryFamily +", using heartwarming words.";
 
     const prompt =
-    "You are an expert on jewelry. change the golden word for 18-karat gold. Be very descriptive with colors and refer to any stone that looks like a diamond to Diamonice and Give me a concise and short description of this image of " + jewelryFamily +", using charming and poetic words.";
+    "You are a copywriter expert on jewelry. Give me a concise and short description of this image of " + jewelryFamily + ", using different words, only describe the jewelry, its colors and shapes and don’t write much about how to use it. Change the golden word for 18-karat gold and the silver word for platinum.";
 
 
   const imageParts = [await blobToGenerativePart(ImageRequestFile, imageType)];
