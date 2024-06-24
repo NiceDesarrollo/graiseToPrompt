@@ -163,7 +163,7 @@ function Page() {
                     className="space-y-6"
                     action="#"
                   >
-                    <div>
+                    {/* <div>
                       <label
                         htmlFor="email"
                         className="flex items-center justify-between"
@@ -224,7 +224,9 @@ function Page() {
                       >
                         Sign in
                       </button>
-                    </div>
+                    </div> */}
+
+
                     {error && (
                       <div
                         className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
