@@ -82,7 +82,7 @@ export async function POST(request) {
 
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({
-    model: "gemini-pro-vision",
+    model: "gemini-1.5-flash",
     generationConfig: generation_config,
     safetySettings: safety_settings,
   });

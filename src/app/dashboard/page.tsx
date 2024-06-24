@@ -196,8 +196,9 @@ function DashboardPage() {
                     name="jewerlyFamily"
                     className="rounded h-10 cursor-pointer text-white px-2"
                     style={{ backgroundColor: "#2563eb" }}
+                    value={jewelryFamily}
                   >
-                    <option value="" selected disabled hidden>
+                    <option value="" disabled hidden>
                       Choose jewelry family
                     </option>
                     <option value="necklace">Collar</option>
