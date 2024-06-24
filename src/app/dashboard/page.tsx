@@ -233,7 +233,6 @@ function DashboardPage() {
                   <div className="grid grid-cols-1 space-y-2">
                     <label className="text-sm font-bold text-gray-500 tracking-wide">
                       Image here
-                      
                     </label>
                     <div className="flex items-center justify-center w-full ">
                       <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
