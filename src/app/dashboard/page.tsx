@@ -190,6 +190,7 @@ function DashboardPage() {
                   </h3>
                 </div>
 
+                {/* chooce jewelry family */}
                 <div className="mt-4">
                   <select
                     onChange={handleJewelryFamilyChange}
@@ -230,42 +231,41 @@ function DashboardPage() {
                   className="mt-8 space-y-3"
                   action="#"
                 >
-                  <div className="grid grid-cols-1 space-y-2">
+                  <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-500 tracking-wide">
                       Image here
                     </label>
-                    <div className="flex items-center justify-center w-full ">
-                      <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
-                        <div className="h-full w-full text-center flex flex-col items-center justify-center  ">
-                          <div className="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
+
+                    <div className="flex items-center justify-center w-full">
+                      <label className="flex flex-col items-center justify-center w-full h-64 border-4 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                        <div className="flex flex-col items-center justify-center pt-5 pb-6 w-full">
+                          <div className="w-full max-w-xs mx-auto mb-4 flex items-center justify-center">
                             <Image
-                              className="has-mask h-36 object-center my-5"
+                              className="object-contain w-full h-auto max-h-36"
                               src={image ? (image as string) : "./image.svg"}
-                              alt="freepik image"
-                              height={300}
+                              alt="Upload preview"
                               width={300}
+                              height={300}
                               priority
                             />
                           </div>
                           {!image && (
                             <>
-                              <p className="pointer-none text-gray-500">
-                                <span className="text-sm">Drag and drop</span>{" "}
-                                files here <br /> or{" "}
-                                <span className="text-blue-600 hover:underline">
-                                  select a file
+                              <p className="mb-2 text-sm text-gray-500">
+                                <span className="font-semibold">
+                                  Click to upload
                                 </span>{" "}
+                                or drag and drop
                               </p>
-                              <p className="text-gray-300 text-sm">
-                                .webp .jpeg .png .jpg
+                              <p className="text-xs text-gray-500">
+                                .webp, .jpeg, .png, .jpg
                               </p>
                             </>
                           )}
                         </div>
-
                         <input
-                          className="pt-10"
                           type="file"
+                          className="hidden"
                           accept="image/*"
                           onChange={handleImageChange}
                           name="imageForm"
@@ -273,7 +273,7 @@ function DashboardPage() {
                       </label>
                     </div>
 
-                    <div style={{marginTop:'20px'}}>
+                    <div style={{ marginTop: "20px" }}>
                       <button
                         disabled={!image}
                         type="submit"
